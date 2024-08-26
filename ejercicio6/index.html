@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Texto del Botón</title>
+</head>
+<body>
+    <button id="miBoton">Texto Original</button>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecciona el botón por su ID
+            const boton = document.getElementById('miBoton');
+            
+            // Define la función que cambia el texto del botón
+            function cambiarTexto() {
+                boton.textContent = 'Texto Modificado';
+            }
+            
+            // Añade un evento 'click' al botón que llama a la función cambiarTexto
+            boton.addEventListener('click', cambiarTexto);
+        });
+    </script>
+</body>
+</html>

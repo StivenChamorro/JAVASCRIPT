@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Fondo del Div</title>
+    <style>
+        #miDiv {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="miDiv"></div>
+    <button id="cambiarFondo">Cambiar Color de Fondo</button>
+
+    <script>
+        // Espera a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecciona el div y el botón por sus ID
+            const div = document.getElementById('miDiv');
+            const boton = document.getElementById('cambiarFondo');
+            
+            // Define la función que cambia el color de fondo del div
+            function cambiarFondo() {
+                div.style.backgroundColor = 'lightcoral';
+            }
+            
+            // Añade un evento 'click' al botón que llama a la función cambiarFondo
+            boton.addEventListener('click', cambiarFondo);
+        });
+    </script>
+</body>
+</html>

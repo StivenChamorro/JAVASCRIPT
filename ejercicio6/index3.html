@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Párrafo</title>
+</head>
+<body>
+    <p id="miParrafo">Texto Original del Párrafo</p>
+    <button id="cambiarTexto">Cambiar Texto del Párrafo</button>
+
+    <script>
+        // Espera a que el DOM esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecciona el párrafo y el botón por sus ID
+            const parrafo = document.getElementById('miParrafo');
+            const boton = document.getElementById('cambiarTexto');
+            
+            // Define la función que cambia el contenido del párrafo
+            function cambiarTexto() {
+                parrafo.textContent = 'Texto Modificado del Párrafo';
+            }
+            
+            // Añade un evento 'click' al botón que llama a la función cambiarTexto
+            boton.addEventListener('click', cambiarTexto);
+        });
+    </script>
+</body>
+</html>
